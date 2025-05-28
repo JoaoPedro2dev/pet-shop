@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+    display: flex;
+  }
+
+  .sidebar {
+    width: 250px;
+    background-color: #ffbf80;
+    height: 100vh;
+    padding: 1rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: width 0.3s ease;
+  }
+
+  .sidebar h1 {
+    font-size: 1.4rem;
+    color: #5a2e0e;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .sidebar ul {
+    list-style: none;
+  }
+
+  .sidebar li {
+    margin-bottom: 1rem;
+  }
+
+  .sidebar a {
+    text-decoration: none;
+    color: #5a2e0e;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+
+  .sidebar a:hover {
+    background-color: #ffd9b3;
+  }
+
+  .dropdown-btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dropdown-container {
+    display: none;
+    padding-left: 1rem;
+  }
+
+  .dropdown-container a {
+    font-size: 0.95rem;
+  }
+
+
+  .main-content {
+    margin-left: 250px;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  header {
+    background-color: #ffd9b3;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5a2e0e;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .card {
+    background-color: #fffbe6;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+
+  .card:hover {
+    transform: scale(1.02);
+  }
+
+  .card i {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #ff9933;
+  }
+
+  .card h2 {
+    margin: 0.2rem 0;
+    font-size: 1.8rem;
+  }
+
+  .card span {
+    font-size: 1rem;
+    color: #777;
+  }
+
+  @media (max-width: 768px) {
+    .sidebar {
+      position: absolute;
+      width: 200px;
+      z-index: 100;
+    }
+
+    .main-content {
+      margin-left: 200px;
+    }
+  }
