@@ -1,5 +1,5 @@
 <?php
-    require"APP/MODEL/Veterinario.php";
+    require"../DAO/VeterinarioDAO.php";
 
     class VeterinarioController{
 

@@ -1,11 +1,11 @@
 <?PHP
-    require"APP/DAO/VeterinarioDAO.php";
+    require"../DAO/VeterinarioDAO.php";
 
     class Veterinario{
         private $id, $crv, $nome, $telefone;
 
         public function cadastrar(){
-            $dao = new VeterinarioDAO();
+            $dao = new VeterinarioDAO;
             $dao->insert($this);
         }
 

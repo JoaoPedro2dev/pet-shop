@@ -1,6 +1,5 @@
 <?php
-
-    require"APP/MODEL/Veterinario.php";
+    // require_once"../MODEL/Veterinario.php";
 
     class VeterinarioDAO{
         private $conexao;
@@ -24,9 +23,12 @@
             $query->bindValue(2, $veterinario->getCRV());
             $query->bindValue(3, $veterinario->getTelefone());
 
-            $query->execute();
-
-            header('Location: APP/VIEW/VETERINARIO/TABELA/veterinarioTabela.php');
+            if($query->execute()){
+                header('Location: ../VIEW/VETERINARIO/TABELA/veterinarioTabela.php');
+                exit();
+            }else{
+                echo "erro ao cadastrar";    
+            }
         }
     }
 
